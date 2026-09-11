@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#333333">
+<title>Food Picker</title>
+<style>
+    * { box-sizing: border-box; }
+    body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+    }
+    .container {
+        text-align: center;
+        width: 90%;
+        max-width: 500px;
+    }
+    h1 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    #food {
+        min-height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+    button {
+        width: 100%;
+        padding: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        background: #333;
+        color: white;
+    }
+    button:active { transform: scale(0.98); }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>What should we eat?</h1>
+    <div id="food">Press the button!</div>
+    <button onclick="pickFood()">Choose Food</button>
+</div>
+
+<script>
+const foods = [
+    "Arayis",
+    "Mahshi qusa wa bitinjan",
+    "Mlokhiya",
+    "Mjadara",
+    "Pizza",
+    "Panini",
+    "Chicken curry",
+    "Chicken biryani",
+    "Shish tawooq",
+    "Chinese Chicken stir fry",
+    "Normal Chinese Chicken",
+    "Imm fadis thing",
+    "Basilla wa ruz",
+    "Mac and bechamel",
+    "Makbous fish",
+    "Makbous Chicken",
+    "Sabanikh and ruz",
+    "Sfeeha and the cheese",
+    "Batata and Egg",
+    "Pot pie",
+    "Kofta the square with potato and tomato",
+    "Kofta skewer",
+    "White Beans and rice (with meat (optional))",
+    "Fasulya wa ruz",
+    "Bamiya wa ruz",
+    "Chicken pizza sandwich thing",
+    "Ruz oozy"
+];
+
+function pickFood() {
+    const randomIndex = Math.floor(Math.random() * foods.length);
+    document.getElementById("food").textContent = foods[randomIndex];
+}
+</script>
+</body>
+</html>
