@@ -5,8 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#333333">
 <title>Food Picker</title>
+
 <style>
-    * { box-sizing: border-box; }
+    * {
+        box-sizing: border-box;
+    }
+
     body {
         margin: 0;
         min-height: 100vh;
@@ -16,15 +20,18 @@
         font-family: Arial, sans-serif;
         background: #f5f5f5;
     }
+
     .container {
         text-align: center;
         width: 90%;
         max-width: 500px;
     }
+
     h1 {
         font-size: 32px;
         margin-bottom: 40px;
     }
+
     #food {
         min-height: 90px;
         display: flex;
@@ -34,6 +41,7 @@
         font-weight: bold;
         margin-bottom: 40px;
     }
+
     button {
         width: 100%;
         padding: 20px;
@@ -45,24 +53,39 @@
         background: #333;
         color: white;
     }
-    button:active { transform: scale(0.98); }
+
+    button:active {
+        transform: scale(0.98);
+    }
+
+    .reminder {
+        margin-top: 20px;
+        font-size: 15px;
+        color: #777;
+        line-height: 1.4;
+    }
 </style>
 </head>
+
 <body>
+
 <div class="container">
+
     <h1>What should we eat?</h1>
+
     <div id="food">Press the button!</div>
+
     <button onclick="pickFood()">Choose Food</button>
-   
-   <div class="reminder"> 
-      Remember, always do what's easiest for you! 
-   </div>
-   
+
+    <div class="reminder">
+        Remember, always do what's easiest for you!
+    </div>
+
 </div>
-   
 
 <script>
 const foods = [
+   
     "Arayis",
     "Mahshi qusa wa bitinjan",
     "Mlokhiya",
@@ -113,7 +136,6 @@ const foods = [
     "Zahra",
     "Quesadilla burger (only if it is easy to make)",
     "Hot dogs"
-
 ];
 
 function pickFood() {
@@ -121,5 +143,6 @@ function pickFood() {
     document.getElementById("food").textContent = foods[randomIndex];
 }
 </script>
+
 </body>
 </html>
